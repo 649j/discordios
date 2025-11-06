@@ -47,7 +47,6 @@ class GatewayPayload:
             gateway = GatewayPayload(config)
             payload = gateway.build_payload(self)
             
-            # Call hooks and send
             await self.call_hooks('before_identify', self.shard_id, initial=self._initial_identify)
             await self.send_as_json(payload)
             self._initial_identify = False
@@ -70,6 +69,7 @@ def create_identify_function(config):
     gateway = GatewayPayload(config)
 
     return gateway.create_identify()
+
 
 
 
