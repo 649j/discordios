@@ -56,7 +56,6 @@ def apply_mobile_status(platform='ios', **kwargs):
         bot = discord.Client(intents=discord.Intents.default())
     """
     
-    # Create config with kwargs
     config = MobileConfig(device=platform, **kwargs)
     
     return setup_mobile_status(platform, config)
@@ -73,6 +72,7 @@ def reset_status():
     discord.gateway.DiscordWebSocket.identify = _original_identify
 
     logger.info("Reset to original Discord status")
+
 
 
 
