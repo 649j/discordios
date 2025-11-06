@@ -11,15 +11,6 @@ class GatewayPayload:
         self.config = config or MobileConfig()
     
     def build_payload(self, websocket):
-        """
-        Build IDENTIFY payload
-        
-        Args:
-            websocket: DiscordWebSocket instance
-        
-        Returns:
-            dict - Complete IDENTIFY payload
-        """
         payload = {
             'op': websocket.IDENTIFY,
             'd': {
@@ -90,4 +81,5 @@ def create_identify_function(config):
     gateway = GatewayPayload(config)
 
     return gateway.create_identify()
+
 
