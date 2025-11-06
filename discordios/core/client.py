@@ -34,7 +34,6 @@ def setup_mobile_status(platform='ios', config=None):
     if config is None:
         config = MobileConfig(device=platform)
     
-    # Create and apply the identify function
     identify_func = create_identify_handler(config)
     discord.gateway.DiscordWebSocket.identify = identify_func
     
@@ -74,6 +73,7 @@ def reset_status():
     discord.gateway.DiscordWebSocket.identify = _original_identify
 
     logger.info("Reset to original Discord status")
+
 
 
 
