@@ -7,7 +7,6 @@ from ..exceptions.errors import InvalidDeviceError
 
 logger = logging.getLogger(__name__)
 
-# Store original identify for reset
 _original_identify = discord.gateway.DiscordWebSocket.identify
 
 
@@ -78,3 +77,4 @@ def reset_status():
     """
     discord.gateway.DiscordWebSocket.identify = _original_identify
     logger.info("Reset to original Discord status")
+
