@@ -18,7 +18,6 @@ def setup_mobile_status(platform='ios', config=None):
         platform: str or DeviceType - 'ios', 'android', or 'desktop'
         config: MobileConfig - Optional custom configuration
     
-    Returns:
     
     Example:
     """
@@ -74,6 +73,7 @@ def reset_status():
     """
     discord.gateway.DiscordWebSocket.identify = _original_identify
     logger.info("Reset to original Discord status")
+
 
 
 
