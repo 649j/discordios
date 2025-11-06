@@ -8,12 +8,6 @@ class GatewayPayload:
     """Handles creation of Discord gateway payloads"""
     
     def __init__(self, config=None):
-        """
-        Initialize gateway payload handler
-        
-        Args:
-            config: MobileConfig - Configuration for the device
-        """
         self.config = config or MobileConfig()
     
     def build_payload(self, websocket):
@@ -96,3 +90,4 @@ def create_identify_function(config):
     gateway = GatewayPayload(config)
 
     return gateway.create_identify()
+
