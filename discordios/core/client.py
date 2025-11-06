@@ -23,7 +23,6 @@ def setup_mobile_status(platform='ios', config=None):
     
     Example:
         setup_mobile_status('ios')
-        bot = discord.Client(intents=discord.Intents.default())
     """
     
     # Validate platform
@@ -77,4 +76,5 @@ def reset_status():
     """
     discord.gateway.DiscordWebSocket.identify = _original_identify
     logger.info("Reset to original Discord status")
+
 
