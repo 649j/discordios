@@ -7,7 +7,9 @@ from ..exceptions.errors import InvalidDeviceError
 
 logger = logging.getLogger(__name__)
 
+# Store original identify for reset
 _original_identify = discord.gateway.DiscordWebSocket.identify
+
 
 def setup_mobile_status(platform='ios', config=None):
     """
@@ -25,15 +27,19 @@ def setup_mobile_status(platform='ios', config=None):
         bot = discord.Client(intents=discord.Intents.default())
     """
     
+    # Validate platform
     if not validate_platform(platform):
         raise InvalidDeviceError(platform)
     
+    # Convert string to lowercase
     if isinstance(platform, str):
         platform = platform.lower()
     
+    # Create config if not provided
     if config is None:
         config = MobileConfig(device=platform)
     
+    # Create and apply the identify function
     identify_func = create_identify_handler(config)
     discord.gateway.DiscordWebSocket.identify = identify_func
     
@@ -56,6 +62,7 @@ def apply_mobile_status(platform='ios', **kwargs):
         bot = discord.Client(intents=discord.Intents.default())
     """
     
+    # Create config with kwargs
     config = MobileConfig(device=platform, **kwargs)
     
     return setup_mobile_status(platform, config)
@@ -70,12 +77,4 @@ def reset_status():
         bot = discord.Client(intents=discord.Intents.default())
     """
     discord.gateway.DiscordWebSocket.identify = _original_identify
-
     logger.info("Reset to original Discord status")
-
-
-
-
-
-
-
