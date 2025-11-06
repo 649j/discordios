@@ -41,12 +41,6 @@ class GatewayPayload:
         return payload
     
     def create_identify(self):
-        """
-        Create an identify function for Discord gateway
-        
-        Returns:
-            Async function that sends IDENTIFY payload
-        """
         config = self.config
         
         async def identify(self):
@@ -79,6 +73,7 @@ def create_identify_function(config):
     gateway = GatewayPayload(config)
 
     return gateway.create_identify()
+
 
 
 
