@@ -1,5 +1,3 @@
-"""Gateway payload management"""
-
 import logging
 from ..models.config import MobileConfig
 
@@ -96,4 +94,5 @@ def create_identify_function(config):
         Async function for gateway identification
     """
     gateway = GatewayPayload(config)
+
     return gateway.create_identify()
