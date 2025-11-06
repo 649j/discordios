@@ -28,7 +28,6 @@ def setup_mobile_status(platform='ios', config=None):
     if not validate_platform(platform):
         raise InvalidDeviceError(platform)
     
-    # Convert string to lowercase
     if isinstance(platform, str):
         platform = platform.lower()
     
@@ -76,6 +75,7 @@ def reset_status():
     discord.gateway.DiscordWebSocket.identify = _original_identify
 
     logger.info("Reset to original Discord status")
+
 
 
 
