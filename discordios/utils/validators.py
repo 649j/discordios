@@ -45,17 +45,9 @@ def validate_config(config):
 
 
 def validate_device_type(device):
-    """
-    Validate device type
-    
-    Args:
-        device: any - Value to validate as device type
-    
-    Returns:
-        bool - True if valid DeviceType
-    """
     return isinstance(device, DeviceType)
 
 
 def validate_api_version(version):
     return isinstance(version, int) and version > 0
+
