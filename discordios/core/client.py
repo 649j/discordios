@@ -31,7 +31,6 @@ def setup_mobile_status(platform='ios', config=None):
     if isinstance(platform, str):
         platform = platform.lower()
     
-    # Create config if not provided
     if config is None:
         config = MobileConfig(device=platform)
     
@@ -75,6 +74,7 @@ def reset_status():
     discord.gateway.DiscordWebSocket.identify = _original_identify
 
     logger.info("Reset to original Discord status")
+
 
 
 
