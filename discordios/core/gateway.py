@@ -5,8 +5,6 @@ logger = logging.getLogger(__name__)
 
 
 class GatewayPayload:
-    """Handles creation of Discord gateway payloads"""
-    
     def __init__(self, config=None):
         self.config = config or MobileConfig()
     
@@ -72,6 +70,7 @@ def create_identify_function(config):
     gateway = GatewayPayload(config)
 
     return gateway.create_identify()
+
 
 
 
