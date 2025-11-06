@@ -1,5 +1,3 @@
-"""Validation utility functions"""
-
 from ..models.enums import DeviceType
 from ..models.config import MobileConfig
 
@@ -69,4 +67,5 @@ def validate_api_version(version):
     Returns:
         bool - True if valid version
     """
+
     return isinstance(version, int) and version > 0
