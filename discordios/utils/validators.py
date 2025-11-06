@@ -58,14 +58,5 @@ def validate_device_type(device):
 
 
 def validate_api_version(version):
-    """
-    Validate API version
-    
-    Args:
-        version: int - API version to validate
-    
-    Returns:
-        bool - True if valid version
-    """
-
     return isinstance(version, int) and version > 0
+
