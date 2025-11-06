@@ -14,15 +14,6 @@ def validate_platform(platform):
 
 
 def validate_config(config):
-    """
-    Validate a MobileConfig object
-    
-    Args:
-        config: MobileConfig - Configuration to validate
-    
-    Returns:
-        bool - True if valid, False otherwise
-    """
     if not isinstance(config, MobileConfig):
         return False
     
@@ -36,6 +27,3 @@ def validate_device_type(device):
 
 def validate_api_version(version):
     return isinstance(version, int) and version > 0
-
-
-
