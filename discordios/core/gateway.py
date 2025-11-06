@@ -57,18 +57,10 @@ class GatewayPayload:
 
 
 def create_identify_function(config):
-    """
-    Create an identify function with the given config
-    
-    Args:
-        config: MobileConfig - Device configuration
-    
-    Returns:
-        Async function for gateway identification
-    """
     gateway = GatewayPayload(config)
 
     return gateway.create_identify()
+
 
 
 
