@@ -22,7 +22,6 @@ class GatewayPayload:
             }
         }
         
-        # Add shard info
         if websocket.shard_id is not None and websocket.shard_count is not None:
             payload['d']['shard'] = [websocket.shard_id, websocket.shard_count]
         
@@ -81,5 +80,6 @@ def create_identify_function(config):
     gateway = GatewayPayload(config)
 
     return gateway.create_identify()
+
 
 
