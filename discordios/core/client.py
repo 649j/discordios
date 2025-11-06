@@ -11,17 +11,6 @@ _original_identify = discord.gateway.DiscordWebSocket.identify
 
 
 def setup_mobile_status(platform='ios', config=None):
-    """
-    Setup mobile status for Discord bot
-    
-    Args:
-        platform: str or DeviceType - 'ios', 'android', or 'desktop'
-        config: MobileConfig - Optional custom configuration
-    
-    
-    Example:
-    """
-    
     # Validate platform
     if not validate_platform(platform):
         raise InvalidDeviceError(platform)
@@ -73,6 +62,7 @@ def reset_status():
     """
     discord.gateway.DiscordWebSocket.identify = _original_identify
     logger.info("Reset to original Discord status")
+
 
 
 
