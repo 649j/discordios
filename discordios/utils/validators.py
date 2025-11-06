@@ -26,7 +26,6 @@ def validate_config(config):
     if not isinstance(config, MobileConfig):
         return False
     
-    # Check required attributes
     required = ['device', 'compress', 'large_threshold', 'api_version']
     return all(hasattr(config, attr) for attr in required)
 
@@ -37,5 +36,6 @@ def validate_device_type(device):
 
 def validate_api_version(version):
     return isinstance(version, int) and version > 0
+
 
 
