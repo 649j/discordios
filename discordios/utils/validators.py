@@ -3,19 +3,6 @@ from ..models.config import MobileConfig
 
 
 def validate_platform(platform):
-    """
-    Validate if a platform is valid
-    
-    Args:
-        platform: str or DeviceType - Platform to validate
-    
-    Returns:
-        bool - True if valid, False otherwise
-    
-    Example:
-        if validate_platform('ios'):
-            print("Valid platform!")
-    """
     if isinstance(platform, DeviceType):
         return True
     
@@ -50,4 +37,5 @@ def validate_device_type(device):
 
 def validate_api_version(version):
     return isinstance(version, int) and version > 0
+
 
