@@ -13,19 +13,6 @@ def get_device_info(platform):
 
 
 def format_device_name(platform):
-    """
-    Format device name for display
-    
-    Args:
-        platform: str or DeviceType - Platform to format
-    
-    Returns:
-        str - Formatted device name with icon
-    
-    Example:
-        name = format_device_name('ios')
-        print(name)  # '📱 iPhone'
-    """
     info = get_device_info(platform)
     return f"{info['icon']} {info['device']}"
 
@@ -39,3 +26,4 @@ def compare_devices(device1, device2):
     info2 = get_device_info(device2)
 
     return info1['device'] == info2['device']
+
