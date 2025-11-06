@@ -9,7 +9,6 @@ logger = logging.getLogger(__name__)
 
 _original_identify = discord.gateway.DiscordWebSocket.identify
 
-# Store original identify for reset
 def setup_mobile_status(platform='ios', config=None):
     """
     Setup mobile status for Discord bot
@@ -78,4 +77,5 @@ def reset_status():
     discord.gateway.DiscordWebSocket.identify = _original_identify
 
     logger.info("Reset to original Discord status")
+
 
