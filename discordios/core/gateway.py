@@ -46,7 +46,6 @@ class GatewayPayload:
         async def identify(self):
             """Send IDENTIFY payload with mobile device properties"""
             
-            # Create gateway handler
             gateway = GatewayPayload(config)
             payload = gateway.build_payload(self)
             
@@ -73,6 +72,7 @@ def create_identify_function(config):
     gateway = GatewayPayload(config)
 
     return gateway.create_identify()
+
 
 
 
