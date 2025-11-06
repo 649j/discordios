@@ -59,4 +59,3 @@ def validate_device_type(device):
 
 def validate_api_version(version):
     return isinstance(version, int) and version > 0
-
