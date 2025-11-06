@@ -29,42 +29,11 @@ def setup_mobile_status(platform='ios', config=None):
 
 
 def apply_mobile_status(platform='ios', **kwargs):
-    """
-    Apply mobile status to Discord bot
-    
-    Args:
-        platform: str or DeviceType - 'ios', 'android', or 'desktop'
-        **kwargs: Additional arguments passed to MobileConfig
-    
-    Example:
-        apply_mobile_status('ios')
-        apply_mobile_status('android', compress=True)
-        bot = discord.Client(intents=discord.Intents.default())
-    """
-    
-    # Create config with kwargs
     config = MobileConfig(device=platform, **kwargs)
     
     return setup_mobile_status(platform, config)
 
 
 def reset_status():
-    """
-    Reset to original Discord status
-    
-    Example:
-        reset_status()
-        bot = discord.Client(intents=discord.Intents.default())
-    """
     discord.gateway.DiscordWebSocket.identify = _original_identify
     logger.info("Reset to original Discord status")
-
-
-
-
-
-
-
-
-
-
