@@ -19,7 +19,6 @@ def setup_mobile_status(platform='ios', config=None):
         config: MobileConfig - Optional custom configuration
     
     Returns:
-        The identify function that was set
     
     Example:
     """
@@ -75,6 +74,7 @@ def reset_status():
     """
     discord.gateway.DiscordWebSocket.identify = _original_identify
     logger.info("Reset to original Discord status")
+
 
 
 
