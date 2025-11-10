@@ -13,12 +13,12 @@ Make your Discord bot appear as if it's running on a mobile device (iOS, Android
 
 ### From GitHub
 ```bash
-pip install git+https://github.com/B3nderServices/DiscordiOS.git
+pip install git+https://github.com/649j/discordios.git
 ```
 
 ### Local Development
 ```bash
-git clone https://github.com/B3nderServices/DiscordiOS.git
+git clone https://github.com/649j/discordios.git
 cd DiscordiOS
 pip install -e .
 ```
@@ -160,5 +160,6 @@ For issues, questions, or contributions, please visit:
 https://github.com/B3nderServices/DiscordiOS
 
 ---
+
 
 ⭐ If you like this project, please give it a star on GitHub!
