@@ -1,13 +1,13 @@
-# DiscordiOS 📱
+# DiscordiOS
 
 Make your Discord bot appear as if it's running on a mobile device (iOS, Android, or Desktop).
 
 ## Features
 
-- ✅ Emulate iOS, Android, or Desktop devices
-- ✅ Simple and easy to use
-- ✅ Built on top of discord.py
-- ✅ Fully compatible with discord.py features
+-  Emulate iOS, Android, or Desktop devices
+-  Simple and easy to use
+-  Built on top of discord.py
+-  Fully compatible with discord.py features
 
 ## Installation
 
@@ -37,8 +37,7 @@ bot = MobileClient(
 
 @bot.event
 async def on_ready():
-    print(f'✅ {bot.user} is online!')
-    print(f'📱 Device: {bot.device_name}')
+    print(f'{bot.user} now as running!')
 
 bot.run('YOUR_TOKEN_HERE')
 ```
@@ -108,7 +107,6 @@ bot = MobileClient(device=DeviceType.IOS, intents=discord.Intents.all())
 async def on_ready():
     print(f'Bot: {bot.user.name}')
     print(f'ID: {bot.user.id}')
-    print(f'Device: {bot.device_name}')
     print('━' * 40)
 
 @bot.event
@@ -152,14 +150,15 @@ MIT License - feel free to use this in your projects!
 
 ## Credits
 
-Created by **B3nderServices**
+Created by **nucrr**
 
 ## Support
 
 For issues, questions, or contributions, please visit:
-https://github.com/B3nderServices/DiscordiOS
+https://github.com/nucrr/DiscordiOS
 
 ---
 
 
 ⭐ If you like this project, please give it a star on GitHub!
+
